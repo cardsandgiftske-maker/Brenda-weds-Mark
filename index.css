@@ -1,0 +1,95 @@
+:root {
+  --wedding-brown-dark: #381A00;
+  --wedding-brown-rich: #6F3400;
+  --wedding-brown-light: #A67C52;
+  --wedding-tan: #D2B48C;
+  --wedding-cream: #FAF3E0;
+  --wedding-text: #261100;
+  --wedding-text-muted: #5C4033;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--wedding-cream);
+  overflow-x: hidden;
+  color: var(--wedding-text);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--wedding-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--wedding-brown-light);
+  border-radius: 10px;
+}
+
+/* Font Classes */
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+.font-sans {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slowPan {
+  from { transform: scale(1.05) translateX(-1%); }
+  to { transform: scale(1.05) translateX(1%); }
+}
+
+@keyframes subtleZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+@keyframes scrollDot {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(20px); opacity: 0; }
+}
+
+@keyframes fadeUpLong {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.animate-slow-pan {
+  animation: slowPan 20s ease-in-out infinite alternate;
+}
+
+.animate-subtle-zoom {
+  animation: subtleZoom 40s ease-in-out infinite alternate;
+}
+
+.animate-scroll-dot {
+  animation: scrollDot 2s ease-in-out infinite;
+}
+
+.animate-fade-up-long {
+  animation: fadeUpLong 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Envelope Helpers */
+.envelope-rotate-x-0 { 
+  transform: perspective(1000px) rotateX(0deg); 
+}
+.envelope-rotate-x-180 { 
+  transform: perspective(1000px) rotateX(180deg); 
+}
