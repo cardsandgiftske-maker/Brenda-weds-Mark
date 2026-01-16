@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
           <div 
             className="absolute -top-[10%] -bottom-[10%] inset-x-0 bg-cover bg-center animate-subtle-zoom"
             style={{ 
-              backgroundImage: `url('couple.jpg')` 
+              backgroundImage: import coupleimg from "./components/couple.jpg"; 
             }}
           >
           </div>
