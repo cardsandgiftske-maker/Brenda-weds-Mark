@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import coupleimg  from './components/couple.jpeg';
+import coupleimg  from './couple.jpeg';
 
 export const Hero: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -18,24 +18,24 @@ export const Hero: React.FC = () => {
         <div 
           className="absolute inset-0"
           style={{ 
-            transform: `translateY(${scrollY * 0.25}px)`,
+            transform: `translateY(${scrollY * 0.3}px)`,
             willChange: 'transform'
           }}
         >
           <div 
-            className="absolute -top-[10%] -bottom-[10%] inset-x-0 bg-cover bg-center animate-subtle-zoom"
+            className="absolute -top-[20%] -bottom-[20%] inset-x-0 bg-cover bg-center animate-subtle-zoom blur-[2px]"
             style={{ 
-              backgroundImage: 'url(' + coupleimg + ')',
+              backgroundImage: 'url(' + coupleimg + ')', 
             }}
           >
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80 backdrop-blur-[0.5px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80 backdrop-blur-[1px]"></div>
         </div>
       </div>
 
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
         <div className="animate-fade-up-long">
-          <span className="block font-sans tracking-[0.6em] text-[10px] md:text-xs uppercase mb-8 opacity-90 drop-shadow-xl text-[#D2B48C] font-bold">
+          <span className="block font-sans tracking-[0.6em] text-[10px] md:text-xs uppercase mb-8 opacity-90 drop-shadow-xl text-[#D2B48C] font-black">
             The Wedding of
           </span>
           
