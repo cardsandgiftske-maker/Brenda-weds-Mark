@@ -24,11 +24,11 @@ export const Hero: React.FC = () => {
           <div 
             className="absolute -top-[10%] -bottom-[10%] inset-x-0 bg-cover bg-center animate-subtle-zoom"
             style={{ 
-              backgroundImage: `url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1200&q=70')` 
+              backgroundImage: `url('couple.jpg')` 
             }}
           >
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80 backdrop-blur-[1px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80 backdrop-blur-[0.5px]"></div>
         </div>
       </div>
 
