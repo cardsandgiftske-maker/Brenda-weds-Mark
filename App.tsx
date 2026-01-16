@@ -18,16 +18,22 @@ const App: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
+    // High stability source (Pixabay provides standard MP3s that work well with HTML5 Audio)
     const audio = new Audio();
+    audio.src = 'https://cdn.pixabay.com/audio/2024/11/08/audio_bc6e7ec41f.mp3';
     audio.loop = true;
-    audio.preload = 'none'; 
+    audio.preload = 'auto';
     
     const handleError = () => {
       const error = audio.error;
-      if (error && error.code === 4) {
-        console.log("Switching to fallback audio source...");
-        audio.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
-        audio.load();
+      if (error) {
+        console.error(`Audio Error: Code ${error.code} - ${error.message}`);
+        // Fallback to another reliable source if the primary fails
+        if (error.code === 4) {
+          console.log("Switching to fallback audio source...");
+          audio.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+          audio.load();
+        }
       }
     };
 
@@ -48,13 +54,14 @@ const App: React.FC = () => {
     setIsOpened(true);
     
     if (audioRef.current) {
-      if (!audioRef.current.src) {
-        audioRef.current.src = 'https://cdn.pixabay.com/audio/2024/11/08/audio_bc6e7ec41f.mp3';
-      }
-      audioRef.current.play().catch(err => {
-        console.warn("Playback blocked:", err);
-        setIsMuted(true);
-      });
+      // Play after user interaction to satisfy browser policies
+      audioRef.current.play()
+        .then(() => console.log("Audio playback active"))
+        .catch(err => {
+          console.warn("Playback blocked or failed:", err);
+          // Auto-mute if play fails to allow silent experience
+          setIsMuted(true);
+        });
     }
   };
 
@@ -63,6 +70,7 @@ const App: React.FC = () => {
       const newMutedState = !audioRef.current.muted;
       audioRef.current.muted = newMutedState;
       setIsMuted(newMutedState);
+      
       if (!newMutedState && audioRef.current.paused) {
         audioRef.current.play().catch(() => {});
       }
@@ -90,7 +98,7 @@ const App: React.FC = () => {
               backgroundImage: 'url(' + coupleimg + ')',
             }}
           >
-            <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
+            <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
           </div>
           
           <div className="relative z-10 scale-90 sm:scale-100 transition-transform duration-700">
