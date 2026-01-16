@@ -19,7 +19,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const audio = new Audio();
     audio.loop = true;
-    audio.preload = 'none'; // Defer loading to save bandwidth
+    audio.preload = 'none'; 
     
     const handleError = () => {
       const error = audio.error;
@@ -47,7 +47,6 @@ const App: React.FC = () => {
     setIsOpened(true);
     
     if (audioRef.current) {
-      // Only set source and load on interaction
       if (!audioRef.current.src) {
         audioRef.current.src = 'https://cdn.pixabay.com/audio/2024/11/08/audio_bc6e7ec41f.mp3';
       }
@@ -87,10 +86,10 @@ const App: React.FC = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center z-0 scale-105 animate-slow-pan"
             style={{ 
-              backgroundImage: `url('https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=800&q=60')`,
+              backgroundImage: `url('couple.jpg')`,
             }}
           >
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
           </div>
           
           <div className="relative z-10 scale-90 sm:scale-100 transition-transform duration-700">
