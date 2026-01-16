@@ -17,14 +17,14 @@ export const Hero: React.FC = () => {
         <div 
           className="absolute inset-0"
           style={{ 
-            transform: `translateY(${scrollY * 0.3}px)`,
+            transform: `translateY(${scrollY * 0.25}px)`,
             willChange: 'transform'
           }}
         >
           <div 
-            className="absolute -top-[20%] -bottom-[20%] inset-x-0 bg-cover bg-center animate-subtle-zoom blur-[2px]"
+            className="absolute -top-[10%] -bottom-[10%] inset-x-0 bg-cover bg-center animate-subtle-zoom"
             style={{ 
-              backgroundImage: `url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=2070&auto=format&fit=crop')` 
+              backgroundImage: `url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1200&q=70')` 
             }}
           >
           </div>
@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
 
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
         <div className="animate-fade-up-long">
-          <span className="block font-sans tracking-[0.6em] text-[10px] md:text-xs uppercase mb-8 opacity-90 drop-shadow-xl text-[#D2B48C] font-black">
+          <span className="block font-sans tracking-[0.6em] text-[10px] md:text-xs uppercase mb-8 opacity-90 drop-shadow-xl text-[#D2B48C] font-bold">
             The Wedding of
           </span>
           
