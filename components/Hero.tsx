@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import coupleimg  from './components/couple.jpeg';
 
 export const Hero: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -24,7 +25,7 @@ export const Hero: React.FC = () => {
           <div 
             className="absolute -top-[10%] -bottom-[10%] inset-x-0 bg-cover bg-center animate-subtle-zoom"
             style={{ 
-              backgroundImage: import { couplejpeg } from './components/couple.jpg.jpeg'; 
+              backgroundImage: 'url(' + coupleimg + ')',
             }}
           >
           </div>
