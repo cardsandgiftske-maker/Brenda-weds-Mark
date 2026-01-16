@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Navigation } from 'lucide-react';
+import peacelilyimg  from './peacelily.jpeg';
 
 export const EventDetails: React.FC = () => {
   return (
@@ -25,9 +26,8 @@ export const EventDetails: React.FC = () => {
             
             <div className="relative h-80 w-full rounded-[2rem] overflow-hidden mb-8 shadow-inner border-4 border-[#FAF3E0]">
               <img 
-                src="https://images.unsplash.com/photo-1519197924294-4ba991a11128?auto=format&fit=crop&w=800&q=60" 
+                src={peacelilyimg}
                 alt="Peace Lily Gardens Venue" 
-                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/20"></div>
