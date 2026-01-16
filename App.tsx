@@ -87,7 +87,7 @@ const App: React.FC = () => {
             className="absolute inset-0 bg-cover bg-center z-0 scale-105 animate-slow-pan"
             style={{ 
               backgroundImage:
-                import { couplejpeg } from './components/couple.jpg.jpeg';
+                import { couplejpeg } from './main/couple.jpg.jpeg';
             }}
           >
             <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
