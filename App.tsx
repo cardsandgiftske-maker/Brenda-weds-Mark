@@ -90,7 +90,7 @@ const App: React.FC = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center z-0 scale-105 animate-slow-pan"
             style={{ 
-              backgroundImage: `url('https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=800&q=60')`,
+              backgroundImage: import { couple.jpeg } from './components/couple.jpeg';,
             }}
           >
             <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
