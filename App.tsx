@@ -91,7 +91,7 @@ const App: React.FC = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center z-0 scale-105 animate-slow-pan"
             style={{ 
-              backgroundImage: 'url(' + couple.jpeg + ')',
+              backgroundImage: 'url(${couple})',
             }}
           >
             <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
