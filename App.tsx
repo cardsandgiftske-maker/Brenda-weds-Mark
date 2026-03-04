@@ -10,6 +10,7 @@ import { BridalParty } from './components/BridalParty';
 import { RSVPForm } from './components/RSVPForm';
 import { Footer } from './components/Footer';
 import { AdminDashboard } from './components/AdminDashboard';
+import coupleimg  from './components/couple.jpeg';
 
 const App: React.FC = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -90,7 +91,7 @@ const App: React.FC = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center z-0 scale-105 animate-slow-pan"
             style={{ 
-              backgroundImage: import { couple.jpeg } from './components/couple.jpeg';,
+              backgroundImage: 'url(' + coupleimg + ')',
             }}
           >
             <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
